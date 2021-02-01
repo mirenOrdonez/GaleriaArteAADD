@@ -43,6 +43,7 @@ public class Gestionar_XPath {
         String salida = "";
         Node node = null;
         String datos_nodo[] = null;
+        int contador = 1;
         
         try {
             //Crea el objeto XPATH
@@ -59,9 +60,19 @@ public class Gestionar_XPath {
             
             for (int i=0; i < nodeList.getLength(); i++) {
                 node = nodeList.item(i);
-                //Para el caso de que la consulta sea sobre Título o Autor.
-                if (node.getNodeName().equals("Titulo") || node.getNodeName().equals("Autor")) {
-                    salida = salida + "\n" + nodeList.item(i).getFirstChild().getNodeValue();
+                //Para el caso de que la consulta sea sobre Título.
+                if (node.getNodeName().equals("Titulo")) {
+                    salida = salida + "\n" + "El título del libro " + contador + " es: " + nodeList.item(i).getFirstChild().getNodeValue();
+                    contador++;
+                }
+                //Para el caso de que la consulta sea sobre Autor.
+                else if (node.getNodeName().equals("Autor")) {
+                    salida = salida + "\n" + "El autor del libro " + contador + " es: " + nodeList.item(i).getFirstChild().getNodeValue();
+                    contador++;
+                }
+                else if (node.getNodeName().equals("publicado_en")) {
+                    salida = salida + "\n" + "El libro " + contador + " se publicó en: " + nodeList.item(i).getFirstChild().getNodeValue();
+                    contador++;
                 }
                 //Para el caso de que sea Libro
                 else if (node.getNodeType() == Node.ELEMENT_NODE) {
