@@ -156,14 +156,17 @@
                       <Font name="Lucida Grande" size="10" style="0"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Seleccione el &#xe1;lbum que desee buscar:"/>
+                    <Property name="text" type="java.lang.String" value="Seleccione seg&#xfa;n localidad:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxFiltrarArtistas">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="1">
-                        <StringItem index="0" value=" "/>
+                      <StringArray count="4">
+                        <StringItem index="0" value="Seleccione"/>
+                        <StringItem index="1" value="Madrid"/>
+                        <StringItem index="2" value="Barcelona"/>
+                        <StringItem index="3" value="Sin datos"/>
                       </StringArray>
                     </Property>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -178,6 +181,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar b&#xfa;squeda"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarArtistasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnMostrarTodoArtistas">
                   <Properties>
@@ -189,6 +195,9 @@
                       <Dimension value="[146, 29]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarTodoArtistasActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -274,7 +283,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblInfoArtistas" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblInfoArtistas" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace pref="10" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -351,16 +360,25 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Insertar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertarArtistasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnModifArtistas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifArtistasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnDeleteArtistas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteArtistasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblAnnoApellido2Artistas">
                   <Properties>
@@ -393,7 +411,6 @@
                 <Component class="javax.swing.JLabel" name="lblInfoArtistas">
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="LABEL INFO"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -457,7 +474,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jComboBoxFiltrarObras" min="-2" pref="231" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-                                  <Component id="btnFiltrarObras" max="32767" attributes="0"/>
+                                  <Component id="btnFiltrarObras" pref="179" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnMostrarTodoObras" min="-2" pref="170" max="-2" attributes="0"/>
                               </Group>
@@ -511,7 +528,7 @@
                       <Font name="Lucida Grande" size="10" style="0"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Seleccione el &#xe1;lbum que desee buscar:"/>
+                    <Property name="text" type="java.lang.String" value="Seleccione el artista que desee buscar:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxFiltrarObras">
@@ -533,6 +550,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar b&#xfa;squeda"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarObrasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnMostrarTodoObras">
                   <Properties>
@@ -544,6 +564,9 @@
                       <Dimension value="[146, 29]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarTodoObrasActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -611,10 +634,10 @@
                                               <Component id="lblPrecioObras" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jTextFieldArtistaObras" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldPrecioObras" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldEstadoObras" alignment="1" min="-2" pref="221" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jTextFieldPrecioObras" pref="221" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldEstadoObras" pref="221" max="32767" attributes="0"/>
+                                              <Component id="jComboBoxArtistaObras" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
@@ -629,7 +652,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblInfoObras" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblInfoObras" min="-2" pref="16" max="-2" attributes="0"/>
                           <EmptySpace pref="10" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -656,7 +679,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lblArtistaObras" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldArtistaObras" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxArtistaObras" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -706,16 +729,25 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Insertar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertarObrasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnModifObras">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifObrasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnDeleteObras">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteObrasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblDescripcionObras">
                   <Properties>
@@ -736,8 +768,6 @@
                     <Property name="text" type="java.lang.String" value="ARTISTA"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldArtistaObras">
-                </Component>
                 <Component class="javax.swing.JLabel" name="lblEstadoObras">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ESTADO"/>
@@ -748,8 +778,17 @@
                 <Component class="javax.swing.JLabel" name="lblInfoObras">
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="LABEL INFO"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxArtistaObras">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -807,12 +846,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jScrollPane6" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                   <Component id="lblBuscarVentas" min="-2" pref="195" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jComboBoxFiltrarVentas" min="-2" pref="231" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-                                  <Component id="btnFiltrarVentas" max="32767" attributes="0"/>
+                                  <Component id="jComboBoxFiltrarVentasAnno" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <EmptySpace pref="246" max="32767" attributes="0"/>
+                                  <Component id="btnFiltrarVentas" min="-2" pref="178" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnMostrarTodoVentas" min="-2" pref="170" max="-2" attributes="0"/>
                               </Group>
@@ -826,14 +864,14 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblBuscarVentas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBoxFiltrarVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnFiltrarVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnMostrarTodoVentas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxFiltrarVentasAnno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblBuscarVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="jScrollPane6" min="-2" pref="186" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -866,14 +904,18 @@
                       <Font name="Lucida Grande" size="10" style="0"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Seleccione el &#xe1;lbum que desee buscar:"/>
+                    <Property name="text" type="java.lang.String" value="Seleccione las ventas que desee buscar:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBoxFiltrarVentas">
+                <Component class="javax.swing.JComboBox" name="jComboBoxFiltrarVentasAnno">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="1">
-                        <StringItem index="0" value=" "/>
+                      <StringArray count="5">
+                        <StringItem index="0" value="A&#xf1;o"/>
+                        <StringItem index="1" value="2018"/>
+                        <StringItem index="2" value="2019"/>
+                        <StringItem index="3" value="2020"/>
+                        <StringItem index="4" value="2021"/>
                       </StringArray>
                     </Property>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -888,6 +930,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar b&#xfa;squeda"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarVentasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnMostrarTodoVentas">
                   <Properties>
@@ -899,6 +944,9 @@
                       <Dimension value="[146, 29]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarTodoVentasActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -929,50 +977,44 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnDeleteVentas" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lblInfoVentas" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="lblArtistaVentas" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="lblTituloVentas" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="lblCodObraVentas" alignment="1" pref="127" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jTextFieldTituloVentas" alignment="0" pref="221" max="32767" attributes="0"/>
-                                                      <Component id="jTextFieldCodObraVentas" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jTextFieldArtistaVentas" alignment="1" max="32767" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                                  <Component id="btnInsertarVentas" min="-2" pref="127" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="btnModifVentas" min="-2" pref="127" max="-2" attributes="0"/>
-                                              </Group>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="lblArtistaVentas" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lblTituloVentas" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lblCodObraVentas" alignment="1" pref="127" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jComboBoxObraVentas" min="-2" pref="221" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxTituloVentas" min="-2" pref="221" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldArtistaVentas" min="-2" pref="221" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="lblFechaVentas" alignment="0" max="32767" attributes="0"/>
                                               <Component id="lblDniCompradorVentas" alignment="0" max="32767" attributes="0"/>
                                               <Component id="lblPrecioVentas" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jTextFieldCompradorVentas" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldPrecioVentas" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldFechaVentas" alignment="1" min="-2" pref="221" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jTextFieldPrecioVentas" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldFechaVentas" max="32767" attributes="0"/>
+                                              <Component id="jComboBoxCompradorVentas" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="146" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="btnInsertarVentas" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btnModifVentas" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnDeleteVentas" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -988,17 +1030,17 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lblCodObraVentas" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldCodObraVentas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxObraVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jComboBoxTituloVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblTituloVentas" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldTituloVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblArtistaVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextFieldArtistaVentas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblArtistaVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1009,7 +1051,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lblDniCompradorVentas" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldCompradorVentas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxCompradorVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1018,7 +1060,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btnInsertarVentas" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnModifVentas" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1034,36 +1076,39 @@
                     <Property name="text" type="java.lang.String" value="C&#xd3;DIGO OBRA"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldCodObraVentas">
-                </Component>
                 <Component class="javax.swing.JLabel" name="lblTituloVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="T&#xcd;TULO"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldTituloVentas">
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblArtistaVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ARTISTA"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldArtistaVentas">
-                </Component>
                 <Component class="javax.swing.JButton" name="btnInsertarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Insertar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertarVentasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnModifVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifVentasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnDeleteVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteVentasActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblPrecioVentas">
                   <Properties>
@@ -1077,8 +1122,6 @@
                     <Property name="text" type="java.lang.String" value="DNI COMPRADOR"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextFieldCompradorVentas">
-                </Component>
                 <Component class="javax.swing.JLabel" name="lblFechaVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="FECHA COMPRA"/>
@@ -1089,8 +1132,40 @@
                 <Component class="javax.swing.JLabel" name="lblInfoVentas">
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="LABEL INFO"/>
+                    <Property name="text" type="java.lang.String" value=" "/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxObraVentas">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxTituloVentas">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextFieldArtistaVentas">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxCompradorVentas">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -1153,7 +1228,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jComboBoxFiltrarClientes" min="-2" pref="231" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-                                  <Component id="btnFiltrarClientes" max="32767" attributes="0"/>
+                                  <Component id="btnFiltrarClientes" pref="179" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnMostrarTodoClientes" min="-2" pref="170" max="-2" attributes="0"/>
                               </Group>
@@ -1207,14 +1282,17 @@
                       <Font name="Lucida Grande" size="10" style="0"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Seleccione el &#xe1;lbum que desee buscar:"/>
+                    <Property name="text" type="java.lang.String" value="Seleccione seg&#xfa;n localidad:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxFiltrarClientes">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="1">
-                        <StringItem index="0" value=" "/>
+                      <StringArray count="4">
+                        <StringItem index="0" value="Seleccione"/>
+                        <StringItem index="1" value="Barcelona"/>
+                        <StringItem index="2" value="Madrid"/>
+                        <StringItem index="3" value=" "/>
                       </StringArray>
                     </Property>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -1229,6 +1307,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Filtrar b&#xfa;squeda"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarClientesActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnMostrarTodoClientes">
                   <Properties>
@@ -1269,53 +1350,49 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblInfoClientes" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnDeleteClientes" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblInfoClientes" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="lblApellido2Clientes" alignment="1" max="32767" attributes="0"/>
-                                                      <Component id="lblApellido1Clientes" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="lblNombreClientes" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="lblDniClientes" alignment="1" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jTextFieldNombreClientes" alignment="0" pref="221" max="32767" attributes="0"/>
-                                                      <Component id="jTextFieldDniClientes" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="jTextFieldApellido1Clientes" alignment="1" max="32767" attributes="0"/>
-                                                      <Component id="jTextFieldApellido2Clientes" alignment="1" max="32767" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                                  <Component id="btnInsertarClientes" min="-2" pref="127" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="btnModifClientes" min="-2" pref="127" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="lblDirClientes" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="lblTelfClientes" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                              <Component id="lblApellido2Clientes" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="lblApellido1Clientes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lblNombreClientes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lblDniClientes" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jTextFieldDirClientes" alignment="0" pref="221" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldTelfClientes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldNombreClientes" alignment="0" pref="221" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDniClientes" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldApellido1Clientes" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldApellido2Clientes" alignment="1" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="146" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                          <Component id="btnInsertarClientes" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnModifClientes" min="-2" pref="127" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="lblDirClientes" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblTelfClientes" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jTextFieldDirClientes" alignment="0" pref="221" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldTelfClientes" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="146" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="btnDeleteClientes" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1323,7 +1400,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblInfoClientes" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblInfoClientes" min="-2" pref="16" max="-2" attributes="0"/>
                           <EmptySpace pref="10" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -1395,16 +1472,25 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Insertar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInsertarClientesActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnModifClientes">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifClientesActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnDeleteClientes">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteClientesActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblApellido2Clientes">
                   <Properties>
@@ -1430,7 +1516,6 @@
                 <Component class="javax.swing.JLabel" name="lblInfoClientes">
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="LABEL INFO"/>
                   </Properties>
                 </Component>
               </SubComponents>
